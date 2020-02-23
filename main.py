@@ -4,7 +4,10 @@ import datetime
 import os
 import usemecab,map,scraping,usegensim,wiki
 import matplotlib.pyplot as plt
-import japanize_matplotlib #pip install japanize-matplotlib
+#import japanize_matplotlib #pip install japanize-matplotlib
+from matplotlib.font_manager import FontProperties
+fp = FontProperties(fname=r'C:\WINDOWS\Fonts\meiryob.ttc')
+
 WIDTH=900
 HEIGHT=300
 

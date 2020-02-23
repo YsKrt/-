@@ -3,7 +3,8 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from matplotlib import pylab
-
+from matplotlib.font_manager import FontProperties
+fp = FontProperties(fname=r'C:\WINDOWS\Fonts\meiryob.ttc')
 
 class scrapingclass():
     def prepare(self):
@@ -55,8 +56,8 @@ class scrapingclass():
             numlist.append(num)
             wordlist.append(data[i].rsplit(",",1)[0])
         ax.pie(numlist, labels=wordlist, autopct="%1.1f%%")
-        plt.title("関連する単語の占める割合")
-        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0, fontsize=10.5)
+        plt.title("関連する単語の占める割合",fontproperties=fp)
+        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0, fontsize=10.5,prop=fp)
         pylab.subplots_adjust(right=0.7)
 
 

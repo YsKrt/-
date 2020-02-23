@@ -3,7 +3,8 @@ import os
 import re
 import matplotlib.pyplot as plt
 from matplotlib import pylab
-
+from matplotlib.font_manager import FontProperties
+fp = FontProperties(fname=r'C:\WINDOWS\Fonts\meiryob.ttc')
 
 class umecab():
     def __init__(self,PATH):
@@ -127,10 +128,10 @@ class umecab():
         for i in range(10) if len(data) >= 10 else range(len(data)):
             num = int(data[i].rsplit(",", 1)[1])
             ax.bar(i, num, label=data[i].rsplit(",", 1)[0])
-        plt.title("使用頻度の高い単語")
-        plt.xlabel("単語")
-        plt.ylabel("使用回数")
-        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0, fontsize=10.5)
+        plt.title("使用頻度の高い単語",fontproperties=fp)
+        plt.xlabel("単語",fontproperties=fp)
+        plt.ylabel("使用回数",fontproperties=fp)
+        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0, fontsize=10.5,prop=fp)
         pylab.subplots_adjust(right=0.7)
 
     def saveconfig(self):
