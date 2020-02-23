@@ -4,7 +4,7 @@ import datetime
 import os
 import usemecab,map,scraping,usegensim,wiki
 import matplotlib.pyplot as plt
-import japanize_matplotlib
+import japanize_matplotlib #pip install japanize-matplotlib
 WIDTH=900
 HEIGHT=300
 
@@ -182,7 +182,7 @@ class Frame(tk.Frame):
         self.child.title("usemecab")
         self.child.geometry("300x300+0+500")
         memo = tk.Text(self.child)
-        memo.pack(x=3, y=3, width=300-6, height=300-6)
+        memo.place(x=3, y=3, width=300-6, height=300-6)
         for i,s in enumerate(text):
             memo.insert(f"{float(i+1)}", s)
         memo.insert("end","以上の単語がリストに追加されました。")
