@@ -3,6 +3,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from matplotlib import pylab
+
 from matplotlib.font_manager import FontProperties
 fp = FontProperties(fname=r'C:\WINDOWS\Fonts\meiryob.ttc')
 
@@ -47,6 +48,7 @@ class scrapingclass():
     def drawgraph(self,data):
         #if not self.fig_is is None:
          #   return
+
         numlist=[]
         wordlist=[]
         self.fig_is=plt.figure()
